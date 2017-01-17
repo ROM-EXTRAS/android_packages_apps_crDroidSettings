@@ -48,4 +48,8 @@
     <color name="action_picker_fab_background">@color/theme_accent</color>
     <color name="icon_tint_color">@color/theme_accent</color>
     <color name="white">@android:color/white</color>
+
+    <!-- Gesture Anywhere -->
+    <color name="ga_gesture_color">@*android:color/material_deep_teal_500</color>
+    
 </resources>

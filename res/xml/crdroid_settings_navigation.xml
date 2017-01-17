@@ -32,6 +32,13 @@
         android:summary="@string/pa_pie_control_summary"
         android:fragment="com.crdroid.settings.fragments.PieControl" />
 
+    <Preference
+        android:key="gesture_anywhere"
+        android:title="@string/gesture_anywhere_title"
+        android:icon="@drawable/gestures_icon"
+        android:fragment="com.crdroid.settings.gestureanywhere.GestureAnywhereSettings" />
+
+
     <PreferenceCategory
         android:key="category_navbar_interface"
         android:title="@string/navbar_interface_title" >
