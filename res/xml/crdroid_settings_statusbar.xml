@@ -19,5 +19,15 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform">
 
+    <!-- Status bar icons customizations -->
+    <PreferenceCategory
+        android:title="@string/status_bar_icons_category_title">
 
+        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+            android:key="bluetooth_show_battery"
+            android:icon="@drawable/ic_battery_bluetooth"
+            android:title="@string/bluetooth_battery_title"
+            android:summary="@string/bluetooth_battery_summary"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
 </PreferenceScreen>
