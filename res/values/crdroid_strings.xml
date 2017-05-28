@@ -1626,4 +1626,12 @@
     <string name="gesture_anywhere_60">60px</string>
     <string name="gesture_anywhere_64">64px</string>
     <string name="gesture_anywhere_68">68px</string>
+
+    <!-- Lockscreen battery info indicator -->
+    <string name="lockscreen_battery_info_title">Battery info</string>
+    <string name="lockscreen_battery_info_summary">Display battery info when charging</string>
+
+    <!-- Recents lock icon -->
+    <string name="recents_lock_icon_title">Lock Task</string>
+    <string name="recents_lock_icon_summary">Allow locking of tasks in recents view</string>
 </resources>
