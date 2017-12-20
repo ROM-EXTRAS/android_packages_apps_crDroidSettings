@@ -97,7 +97,8 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
-
+        Settings.System.putIntForUser(resolver,
+                Settings.System.THREE_FINGER_GESTURE, 0, UserHandle.USER_CURRENT);
         SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
         SystemProperties.set(SYS_STREAM_SPOOF, "true");
