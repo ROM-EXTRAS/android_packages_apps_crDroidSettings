@@ -69,6 +69,8 @@ public class UserInterface extends SettingsPreferenceFragment {
         ContentResolver resolver = mContext.getContentResolver();
         DozeSettings.reset(mContext);
         PulseSettings.reset(mContext);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.THREE_FINGER_GESTURE, 0, UserHandle.USER_CURRENT);
     }
 
     @Override
