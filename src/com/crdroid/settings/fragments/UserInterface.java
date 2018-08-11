@@ -42,6 +42,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.crdroid.settings.fragments.ui.DozeSettings;
+import com.crdroid.settings.fragments.ui.SmartPixels;
 import com.crdroid.settings.utils.DeviceUtils;
 
 import java.util.ArrayList;
@@ -50,15 +51,31 @@ import java.util.List;
 @SearchIndexable
 public class UserInterface extends SettingsPreferenceFragment {
 
+    public static final String TAG = "UserInterface";
+
+    private static final String SMART_PIXELS = "smart_pixels";
+
+    private Preference mSmartPixels;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.crdroid_settings_ui);
+
+        Context mContext = getActivity().getApplicationContext();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mSmartPixels = (Preference) prefScreen.findPreference(SMART_PIXELS);
+        boolean mSmartPixelsSupported = getResources().getBoolean(
+                com.android.internal.R.bool.config_supportSmartPixels);
+        if (!mSmartPixelsSupported)
+            prefScreen.removePreference(mSmartPixels);
     }
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
         DozeSettings.reset(mContext);
+        SmartPixels.reset(mContext);
     }
 
     @Override
@@ -75,6 +92,11 @@ public class UserInterface extends SettingsPreferenceFragment {
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> keys = super.getNonIndexableKeys(context);
+
+                    boolean mSmartPixelsSupported = context.getResources().getBoolean(
+                            com.android.internal.R.bool.config_supportSmartPixels);
+                    if (!mSmartPixelsSupported)
+                        keys.add(SMART_PIXELS);
 
                     return keys;
                 }
