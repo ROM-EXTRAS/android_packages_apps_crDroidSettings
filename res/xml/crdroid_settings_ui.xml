@@ -29,6 +29,14 @@
         android:entryValues="@array/hardware_keys_action_values"
         android:persistent="false" />
 
+    <!-- Smart Pixels -->
+    <Preference
+        android:key="smart_pixels"
+        android:icon="@drawable/ic_smart_pixels"
+        android:title="@string/smart_pixels_title"
+        android:summary="@string/smart_pixels_summary"
+        android:fragment="com.crdroid.settings.fragments.ui.SmartPixels" />
+
     <!-- Ambient Display -->
     <Preference
         android:key="doze_fragment"
