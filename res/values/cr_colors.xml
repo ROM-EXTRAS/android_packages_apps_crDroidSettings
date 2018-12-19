@@ -60,4 +60,7 @@
 
     <!-- FOD -->
     <color name="fod_item_background_stroke_color">#d6d6d6</color>
+
+    <!-- Gesture Anywhere -->
+    <color name="ga_gesture_color">@*android:color/accent_material_dark</color>
 </resources>
