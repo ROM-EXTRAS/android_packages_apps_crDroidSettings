@@ -52,6 +52,10 @@
     <dimen name="fod_picker_item_size">100dp</dimen>
     <dimen name="fod_picker_item_padding">20dp</dimen>
 
-    <!-- Shortcut picker -->
-    <dimen name="shortcut_picker_left_padding">70dip</dimen>
+    <!-- Gesture Anywhere -->
+    <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
+    <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
+
+    <!-- Padding for Gestures settings screen -->
+    <dimen name="gesture_animation_padding">0dp</dimen>
 </resources>
