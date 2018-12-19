@@ -74,4 +74,9 @@
         android:title="@string/gesture_prevent_ringing_screen_title"
         android:fragment="com.android.settings.gestures.PreventRingingGestureSettings"
         settings:controller="com.android.settings.gestures.PreventRingingParentPreferenceController" />
+
+    <Preference
+        android:key="gesture_anywhere"
+        android:fragment="com.crdroid.settings.fragments.ui.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title" />
 </PreferenceScreen>
