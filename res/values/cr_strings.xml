@@ -2789,4 +2789,10 @@
     <!-- Ambient Display Swipe Gesture -->
     <string name="ambient_swipe_title">Ambient display swipe</string>
     <string name="ambient_swipe_summary">Allow waking up device by swiping up or down on Ambient Display</string>
+
+    <!-- ShortcutPickHelper -->
+    <string name="picker_activities">Activities</string>
+    <string name="select_custom_app_title">Select custom app</string>
+    <string name="select_custom_activity_title">Select custom activity</string>
+    <string name="profile_applist_title">Applications</string>
 </resources>
