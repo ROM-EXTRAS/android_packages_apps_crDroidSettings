@@ -41,6 +41,8 @@ import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.crdroid.settings.fragments.ui.DozeSettings;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -103,6 +105,7 @@ public class UserInterface extends SettingsPreferenceFragment implements
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
+        DozeSettings.reset(mContext);
     }
 
     @Override

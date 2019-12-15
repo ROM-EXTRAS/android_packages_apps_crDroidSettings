@@ -29,6 +29,14 @@
         android:entryValues="@array/hardware_keys_action_values"
         android:persistent="false" />
 
+    <!-- Ambient Display -->
+    <Preference
+        android:key="doze_fragment"
+        android:icon="@drawable/ic_ambient"
+        android:title="@string/doze_display_title"
+        android:summary="@string/doze_display_summary"
+        android:fragment="com.crdroid.settings.fragments.ui.DozeSettings" />
+
     <!-- Ignore window secure -->
     <com.crdroid.settings.preferences.SecureSettingSwitchPreference
         android:key="window_ignore_secure"
