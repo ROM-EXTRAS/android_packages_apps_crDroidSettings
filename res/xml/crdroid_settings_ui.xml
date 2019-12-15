@@ -27,6 +27,14 @@
         android:summary="@string/theme_customization_font_summary"
         android:fragment="com.crdroid.settings.fragments.ui.FontsPicker"/>
 
+    <!-- Ambient Display -->
+    <PreferenceScreen
+        android:key="doze_fragment"
+        android:icon="@drawable/ic_ambient"
+        android:title="@string/doze_display_title"
+        android:summary="@string/doze_display_summary"
+        android:fragment="com.crdroid.settings.fragments.ui.DozeSettings" />
+
     <!-- Icon pack -->
     <Preference
         android:key="android.theme.customization.icon_pack"
