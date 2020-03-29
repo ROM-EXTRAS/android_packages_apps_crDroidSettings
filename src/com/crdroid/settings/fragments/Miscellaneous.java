@@ -35,6 +35,8 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.development.SystemPropPoker;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.crdroid.settings.fragments.misc.AdaptivePlayback;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -106,6 +108,7 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
         SystemProperties.set(SYS_NETFLIX_SPOOF, "false");
+        AdaptivePlayback.reset(mContext);
     }
 
     @Override
