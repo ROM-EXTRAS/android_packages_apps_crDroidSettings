@@ -51,6 +51,8 @@ import java.util.HashMap;
 import java.util.Comparator;
 import java.io.File;
 
+import lineageos.providers.LineageSettings;
+
 public class GestureAnywhereBuilderActivity extends ListActivity
         implements ShortcutPickHelper.OnPickListener {
     private static final int STATUS_SUCCESS = 0;
@@ -140,8 +142,8 @@ public class GestureAnywhereBuilderActivity extends ListActivity
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case REQUEST_NEW_GESTURE:
-                    Settings.System.putLong(getContentResolver(),
-                            Settings.System.GESTURE_ANYWHERE_CHANGED,
+                    LineageSettings.System.putLong(getContentResolver(),
+                            LineageSettings.System.GESTURE_ANYWHERE_CHANGED,
                             System.currentTimeMillis());
                     loadGestures();
                     break;
