@@ -35,6 +35,14 @@
         android:summary="@string/doze_display_summary"
         android:fragment="com.crdroid.settings.fragments.ui.DozeSettings" />
 
+    <!-- Pulse music visualizer -->
+    <Preference
+        android:key="pulse_settings"
+        android:icon="@drawable/ic_pulse"
+        android:title="@string/pulse_settings"
+        android:summary="@string/pulse_settings_summary"
+        android:fragment="com.crdroid.settings.fragments.ui.PulseSettings" />
+
     <!-- Ignore window secure -->
     <com.crdroid.settings.preferences.SecureSettingSwitchPreference
         android:key="window_ignore_secure"
@@ -47,4 +55,5 @@
         android:selectable="false"
         settings:searchable="false"
         android:dependency="window_ignore_secure" />
+
 </PreferenceScreen>
