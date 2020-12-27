@@ -42,6 +42,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.crdroid.settings.fragments.ui.DozeSettings;
+import com.crdroid.settings.fragments.ui.PulseSettings;
 import com.crdroid.settings.utils.DeviceUtils;
 
 import java.util.ArrayList;
@@ -59,6 +60,7 @@ public class UserInterface extends SettingsPreferenceFragment {
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
         DozeSettings.reset(mContext);
+        PulseSettings.reset(mContext);
     }
 
     @Override
