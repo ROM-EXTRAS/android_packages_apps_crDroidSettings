@@ -124,8 +124,8 @@
     <!-- Notification log -->
     <string name="notification_log_summary">Show notifications history log</string>
 
-    <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] --> 
-    <string name="duration_less_than_one_minute">Less than 1 Minute</string> 
+    <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] -->
+    <string name="duration_less_than_one_minute">Less than 1 Minute</string>
 
     <!-- Summary for Wellbeing screen time usage. [CHAR LIMIT=NONE] -->
     <string name="screen_time_summary_usage_today">%1$s today</string>
@@ -424,8 +424,8 @@
     <string name="status_bar_battery_percent_title">Battery percent</string>
     <string name="status_bar_battery_percent_hidden">Hidden</string>
     <string name="status_bar_battery_percent_text_inside">Inside the icon</string>
-    <string name="status_bar_battery_percent_text_next_right">Next to the icon (right)</string> 
-    <string name="status_bar_battery_percent_text_next_left">Next to the icon (left)</string> 
+    <string name="status_bar_battery_percent_text_next_right">Next to the icon (right)</string>
+    <string name="status_bar_battery_percent_text_next_left">Next to the icon (left)</string>
     <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
 
@@ -1118,6 +1118,15 @@
     <!-- Sensor block per-package -->
     <string name="sensor_block_title">Sensor block per-package</string>
     <string name="sensor_block_summary">Block access to certain sensors for some apps to save battery.</string>
+
+    <!-- Sensor block per-package -->
+    <string name="dialog_delete_title">Delete</string>
+    <string name="dialog_delete_message">Remove selected item?</string>
+    <string name="profile_choose_app">Choose app</string>
+    <string name="sensor_block_app_picker_title">Choose apps to block sensors for</string>
+    <string name="sensor_block_app_picker_summary">Block access to various sensors for selected apps.</string>
+    <string name="add_sensor_block_package_title">Add apps for Sensor block</string>
+    <string name="add_sensor_block_package_summary">Significant motion, accelerometer, linear acceleration sensors will be blocked for these apps</string>
 
     <!-- Enable Signature spoofing -->
     <string name="signature_spoofing_title">Spoof package signature</string>
