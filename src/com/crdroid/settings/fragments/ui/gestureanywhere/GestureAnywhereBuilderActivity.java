@@ -42,6 +42,7 @@ import android.text.TextUtils;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.Log;
 import com.android.settings.R;
 import com.crdroid.settings.ShortcutPickHelper;
 
@@ -74,6 +75,7 @@ public class GestureAnywhereBuilderActivity extends ListActivity
     private static final String GESTURES_INFO_ID = "gestures.info_id";
 
     private final File mStoreFile = new File(Environment.getExternalStorageDirectory(), "ga_gestures");
+    private final File mStoreFileBAK = new File("/data/adb", "ga_gestures");;
 
     private final Comparator<NamedGesture> mSorter = new Comparator<NamedGesture>() {
         public int compare(NamedGesture object1, NamedGesture object2) {
@@ -82,6 +84,7 @@ public class GestureAnywhereBuilderActivity extends ListActivity
     };
 
     private static GestureLibrary sStore;
+    private static GestureLibrary sStoreBAK;
 
     private GesturesAdapter mAdapter;
     private GesturesLoadTask mTask;
@@ -104,7 +107,11 @@ public class GestureAnywhereBuilderActivity extends ListActivity
 
         if (sStore == null) {
             sStore = GestureLibraries.fromFile(mStoreFile);
+            sStoreBAK = GestureLibraries.fromFile(mStoreFileBAK);
+
+            Log.v("GestureAnywhere", "Reading from file " + mStoreFile.getAbsolutePath());
             sStore.save();//Add this to save your rename Gesture. This will solve your Rename Gesture Problem.
+            sStoreBAK.save();
 
         }
         mEmpty = (TextView) findViewById(android.R.id.empty);
@@ -213,6 +220,8 @@ public class GestureAnywhereBuilderActivity extends ListActivity
     private void deleteGesture(NamedGesture gesture) {
         sStore.removeGesture(gesture.name + '|' + gesture.uri, gesture.gesture);
         sStore.save();
+        sStoreBAK.removeGesture(gesture.name + '|' + gesture.uri, gesture.gesture);
+        sStoreBAK.save();
 
         final GesturesAdapter adapter = mAdapter;
         adapter.setNotifyOnChange(false);
@@ -288,6 +297,7 @@ public class GestureAnywhereBuilderActivity extends ListActivity
                         mAdapter.addBitmap(namedGesture.gesture.getID(), bitmap);
                         publishProgress(namedGesture);
                         sStore.save();//Add this to save your rename Gesture. This will solve your Rename Gesture Problem.
+                        sStoreBAK.save();
                     }
                 }
 
