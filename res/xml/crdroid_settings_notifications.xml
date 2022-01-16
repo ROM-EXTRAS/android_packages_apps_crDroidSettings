@@ -56,4 +56,12 @@
         android:icon="@drawable/ic_kill"
         android:title="@string/notification_guts_kill_app_button_title"
         android:summary="@string/notification_guts_kill_app_button_summary" />
+
+    <!-- Mute notifications when screen ON -->
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+        android:key="notification_sound_vib_screen_on"
+        android:icon="@drawable/ic_bell_ring"
+        android:title="@string/notification_sound_vib_screen_on_title"
+        android:summary="@string/notification_sound_vib_screen_on_summary"
+        android:defaultValue="true" />
 </PreferenceScreen>
