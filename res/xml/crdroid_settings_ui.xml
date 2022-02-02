@@ -51,6 +51,16 @@
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="true" />
 
+    <!-- Screen Off animation -->
+    <com.crdroid.settings.preferences.SystemSettingListPreference
+        android:key="screen_off_animation"
+        android:icon="@drawable/ic_television_classic"
+        android:title="@string/screen_off_animation_title"
+        android:dialogTitle="@string/screen_off_animation_title"
+        android:entries="@array/screen_off_animation_entries"
+        android:entryValues="@array/screen_off_animation_values"
+        android:defaultValue="0" />
+
     <!-- Ignore window secure -->
     <com.crdroid.settings.preferences.SecureSettingSwitchPreference
         android:key="window_ignore_secure"
