@@ -54,6 +54,14 @@
         android:summary="@string/smart_charging_summary"
         android:fragment="com.crdroid.settings.fragments.misc.SmartCharging"/>
 
+    <!-- Unlock higher quality streams for specific apps -->
+    <SwitchPreference
+        android:key="use_stream_spoof"
+        android:icon="@drawable/ic_stream"
+        android:title="@string/use_stream_spoof_title"
+        android:summary="@string/use_stream_spoof_summary"
+        android:defaultValue="true" />
+
     <!-- Three-fingers-swipe to screenshot -->
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
