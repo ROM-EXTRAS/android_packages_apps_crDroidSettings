@@ -18,6 +18,7 @@ package com.crdroid.settings.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -82,6 +83,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private static final String KEY_VOLUME_MUSIC_CONTROLS = "volbtn_music_controls";
     private static final String KEY_ADDITIONAL_BUTTONS = "additional_buttons";
     private static final String KEY_POWER_MENU = "power_menu";
+    private static final String KEY_VOLUME_PANEL_LEFT = "volume_panel_on_left";
 
     private static final String CATEGORY_POWER = "power_key";
     private static final String CATEGORY_HOME = "home_key";
@@ -110,6 +112,7 @@ public class Buttons extends SettingsPreferenceFragment implements
     private SwitchPreference mSwapVolumeButtons;
     private SwitchPreference mPowerEndCall;
     private SwitchPreference mHomeAnswerCall;
+    private SwitchPreference mVolumePanelLeft;
 
     private LineageHardwareManager mHardware;
 
@@ -319,6 +322,13 @@ public class Buttons extends SettingsPreferenceFragment implements
         mVolumeWakeScreen = findPreference(KEY_VOLUME_WAKE_SCREEN);
         mVolumeMusicControls = findPreference(KEY_VOLUME_MUSIC_CONTROLS);
 
+        boolean isAudioPanelOnLeft = LineageSettings.Secure.getIntForUser(resolver,
+                LineageSettings.Secure.VOLUME_PANEL_ON_LEFT, isAudioPanelOnLeftSide(getActivity()) ? 1 : 0,
+                UserHandle.USER_CURRENT) != 0;
+
+        mVolumePanelLeft = (SwitchPreference) prefScreen.findPreference(KEY_VOLUME_PANEL_LEFT);
+        mVolumePanelLeft.setChecked(isAudioPanelOnLeft);
+
         if (mVolumeWakeScreen != null) {
             if (mVolumeMusicControls != null) {
                 mVolumeMusicControls.setDependency(KEY_VOLUME_WAKE_SCREEN);
@@ -472,9 +482,22 @@ public class Buttons extends SettingsPreferenceFragment implements
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
+        LineageSettings.Secure.putIntForUser(resolver,
+        LineageSettings.Secure.VOLUME_PANEL_ON_LEFT, isAudioPanelOnLeftSide(mContext) ? 1 : 0,
+            UserHandle.USER_CURRENT);
         PowerMenuActions.reset(mContext);
     }
 
+    private static boolean isAudioPanelOnLeftSide(Context context) {
+        try {
+            Context con = context.createPackageContext("org.lineageos.lineagesettings", 0);
+            int id = con.getResources().getIdentifier("def_volume_panel_on_left",
+                    "bool", "org.lineageos.lineagesettings");
+            return con.getResources().getBoolean(id);
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.CRDROID_SETTINGS;
