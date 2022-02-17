@@ -253,5 +253,9 @@
             android:icon="@drawable/ic_rotation"
             android:title="@string/swap_volume_buttons_title"
             android:summary="@string/swap_volume_buttons_summary" />
+        <lineageos.preference.LineageSecureSettingSwitchPreference
+            android:key="volume_panel_on_left"
+            android:icon="@drawable/ic_settings_sound"
+            android:title="@string/volume_panel_on_left_title" />
     </PreferenceCategory>
 </PreferenceScreen>
