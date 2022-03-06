@@ -49,4 +49,11 @@
             android:max="10"
             android:dependency="heads_up_notifications_enabled" />
     </PreferenceCategory>
+
+    <!-- Notification guts kill app button -->
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+        android:key="notification_guts_kill_app_button"
+        android:icon="@drawable/ic_kill"
+        android:title="@string/notification_guts_kill_app_button_title"
+        android:summary="@string/notification_guts_kill_app_button_summary" />
 </PreferenceScreen>
