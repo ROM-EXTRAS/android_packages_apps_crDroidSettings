@@ -87,6 +87,8 @@ public class Notifications extends SettingsPreferenceFragment {
                 Settings.System.LESS_BORING_HEADS_UP, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.HEADS_UP_TIMEOUT, getDefaultDecay(mContext), UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.NOTIFICATION_GUTS_KILL_APP_BUTTON, 0, UserHandle.USER_CURRENT);
     }
 
     @Override
