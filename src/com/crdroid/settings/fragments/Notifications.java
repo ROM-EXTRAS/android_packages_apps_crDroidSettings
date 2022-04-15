@@ -47,6 +47,10 @@ public class Notifications extends SettingsPreferenceFragment {
 
     public static final String TAG = "Notifications";
 
+    private static final String HEADS_UP_TIMEOUT_PREF = "heads_up_timeout";
+
+    private CustomSeekBarPreference mHeadsUpTimeOut;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +61,22 @@ public class Notifications extends SettingsPreferenceFragment {
         final Context mContext = getActivity().getApplicationContext();
         final ContentResolver resolver = mContext.getContentResolver();
         final Resources res = mContext.getResources();
+
+        mHeadsUpTimeOut = (CustomSeekBarPreference)
+                            prefScreen.findPreference(HEADS_UP_TIMEOUT_PREF);
+        mHeadsUpTimeOut.setDefaultValue(getDefaultDecay(mContext));
+    }
+
+    private static int getDefaultDecay(Context context) {
+        int defaultHeadsUpTimeOut = 5;
+        Resources systemUiResources;
+        try {
+            systemUiResources = context.getPackageManager().getResourcesForApplication("com.android.systemui");
+            defaultHeadsUpTimeOut = systemUiResources.getInteger(systemUiResources.getIdentifier(
+                    "com.android.systemui:integer/heads_up_notification_decay", null, null)) / 1000;
+        } catch (Exception e) {
+        }
+        return defaultHeadsUpTimeOut;
     }
 
     public static void reset(Context mContext) {
@@ -65,6 +85,8 @@ public class Notifications extends SettingsPreferenceFragment {
                 Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 1);
         Settings.System.putIntForUser(resolver,
                 Settings.System.LESS_BORING_HEADS_UP, 0, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(resolver,
+                Settings.System.HEADS_UP_TIMEOUT, getDefaultDecay(mContext), UserHandle.USER_CURRENT);
     }
 
     @Override
