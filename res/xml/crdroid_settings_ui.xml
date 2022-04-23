@@ -84,4 +84,11 @@
         android:title="@string/theme_customization_icon_shape_title"
         android:summary="@string/theme_customization_icon_shape_summary"
         android:fragment="com.crdroid.settings.fragments.ui.IconShapes"/>
+
+    <!-- Ignore window secure -->
+    <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+        android:key="window_ignore_secure"
+        android:title="@string/ignore_window_secure_title"
+        android:summary="@string/ignore_window_secure_summary"
+        android:defaultValue="false"/>
 </PreferenceScreen>
