@@ -288,4 +288,9 @@
     <string name="button_wake_summary">Wake device by pressing the button</string>
     <string name="volume_answer_call_title">Answer call</string>
     <string name="volume_answer_call_summary">Answer incoming calls by pressing the volume buttons</string>
+
+    <!-- Ignore window secure -->
+    <string name="ignore_window_secure_title">Ignore window secure flags</string>
+    <string name="ignore_window_secure_summary">Remove screenshots and screenrecords limits for all applications.</string>
+    <string name="ignore_window_secure_footer">Ignore window secure flags: Normally, special applications are replaced with black areas in records. This can be convenient in some cases but may lead to privacy leaks. After changing this toggle, you may need to restart applications for the change to take effect.</string>
 </resources>
