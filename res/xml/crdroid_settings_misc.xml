@@ -70,6 +70,12 @@
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
+    <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
+        android:key="pm_downgrade_allowed"
+        android:title="@string/app_downgrade_title"
+        android:summary="@string/app_downgrade_summary"
+        android:defaultValue="false"/>
+
     <!-- Pocket Judge
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="pocket_judge"
