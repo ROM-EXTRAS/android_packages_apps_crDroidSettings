@@ -1028,4 +1028,8 @@
     <!-- Unlock higher quality streams for specific apps -->
     <string name="use_stream_spoof_title">Unlock higher quality streams</string>
     <string name="use_stream_spoof_summary">Spoof your device as Pixel 6 Pro to unlock higher quality streams on Amazon Prime, Disney+, Hotstar, and Netflix</string>
+
+    <!-- Application downgrade -->
+    <string name="app_downgrade_title">Allow application downgrade</string>
+    <string name="app_downgrade_summary">This allows you to downgrade applications. Note that this may lead to crashes and data corruption.</string>
 </resources>
