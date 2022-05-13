@@ -45,14 +45,14 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
 
     public static final String TAG = "Miscellaneous";
 
-    private static final String POCKET_JUDGE = "pocket_judge";
+//    private static final String POCKET_JUDGE = "pocket_judge";
     private static final String KEY_GAMES_SPOOF = "use_games_spoof";
     private static final String KEY_PHOTOS_SPOOF = "use_photos_spoof";
 
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
 
-    private Preference mPocketJudge;
+//    private Preference mPocketJudge;
     private SwitchPreference mGamesSpoof;
     private SwitchPreference mPhotosSpoof;
 
@@ -65,11 +65,13 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
         final Resources res = getResources();
 
-        mPocketJudge = (Preference) prefScreen.findPreference(POCKET_JUDGE);
+/*
+	mPocketJudge = (Preference) prefScreen.findPreference(POCKET_JUDGE);
         boolean mPocketJudgeSupported = res.getBoolean(
                 com.android.internal.R.bool.config_pocketModeSupported);
         if (!mPocketJudgeSupported)
             prefScreen.removePreference(mPocketJudge);
+*/
 
         mGamesSpoof = (SwitchPreference) prefScreen.findPreference(KEY_GAMES_SPOOF);
         mGamesSpoof.setChecked(SystemProperties.getBoolean(SYS_GAMES_SPOOF, false));
@@ -96,8 +98,8 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
-        Settings.System.putIntForUser(resolver,
-                Settings.System.POCKET_JUDGE, 0, UserHandle.USER_CURRENT);
+//        Settings.System.putIntForUser(resolver,
+//                Settings.System.POCKET_JUDGE, 0, UserHandle.USER_CURRENT);
         Settings.System.putIntForUser(resolver,
                 Settings.System.THREE_FINGER_GESTURE, 0, UserHandle.USER_CURRENT);
         LineageSettings.System.putIntForUser(resolver,
@@ -122,10 +124,12 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
                     List<String> keys = super.getNonIndexableKeys(context);
                     final Resources res = context.getResources();
 
+/*
                     boolean mPocketJudgeSupported = res.getBoolean(
                             com.android.internal.R.bool.config_pocketModeSupported);
                     if (!mPocketJudgeSupported)
                         keys.add(POCKET_JUDGE);
+*/
 
                     return keys;
                 }
