@@ -62,12 +62,12 @@
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
-    <!-- Pocket Judge -->
+    <!-- Pocket Judge
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="pocket_judge"
         android:icon="@drawable/ic_pocket"
         android:title="@string/pocket_judge_title"
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />
-
+    -->
 </PreferenceScreen>
