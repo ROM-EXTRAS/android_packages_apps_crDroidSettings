@@ -64,4 +64,11 @@
         android:title="@string/app_downgrade_title"
         android:summary="@string/app_downgrade_summary"
         android:defaultValue="false"/>
+
+    <!-- Sensor block per-package -->
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+        android:key="sensor_block"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:defaultValue="false"/>
 </PreferenceScreen>
