@@ -36,6 +36,7 @@ import com.android.settingslib.development.SystemPropPoker;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.crdroid.settings.fragments.misc.AdaptivePlayback;
+import com.crdroid.settings.fragments.misc.SensorBlock;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -106,6 +107,7 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
         AdaptivePlayback.reset(mContext);
+        SensorBlock.reset(mContext);
     }
 
     @Override
