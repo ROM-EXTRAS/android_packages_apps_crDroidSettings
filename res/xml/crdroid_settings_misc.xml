@@ -62,6 +62,13 @@
         android:summary="@string/use_stream_spoof_summary"
         android:defaultValue="true" />
 
+    <!-- Sensor block per-package -->
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+        android:key="sensor_block"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:defaultValue="false"/>
+
     <!-- Three-fingers-swipe to screenshot -->
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
