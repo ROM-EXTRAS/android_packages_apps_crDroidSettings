@@ -56,6 +56,8 @@ public class Sound extends SettingsPreferenceFragment {
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
+        Settings.System.putIntForUser(resolver,
+                Settings.System.SCREENSHOT_SHUTTER_SOUND, 1, UserHandle.USER_CURRENT);
         PulseSettings.reset(mContext);
     }
 
