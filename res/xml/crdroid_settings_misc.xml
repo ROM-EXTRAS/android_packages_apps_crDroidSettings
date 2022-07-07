@@ -40,4 +40,12 @@
         android:title="@string/netflix_spoof_title"
         android:summary="@string/netflix_spoof_summary"
         android:defaultValue="false" />
+
+    <!-- Screenshot Sound  -->
+    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+        android:key="screenshot_shutter_sound"
+        android:icon="@drawable/ic_cellphone_sound"
+        android:title="@string/screenshot_shutter_sound_title"
+        android:summary="@string/screenshot_shutter_sound_summary"
+        android:defaultValue="true" />
 </PreferenceScreen>
