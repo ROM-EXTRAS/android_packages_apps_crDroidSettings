@@ -167,7 +167,6 @@
     <string name="lockscreen_battery_info_summary">Display battery info when charging</string>
 
     <!-- Button settings -->
-    <string name="extras_title">Extras</string>
     <string name="additional_buttons_title">Additional buttons</string>
     <string name="hardware_keys_power_key_title">Power button</string>
     <string name="hardware_keys_home_key_title">Home button</string>
@@ -221,8 +220,6 @@
     <string name="button_wake_summary">Wake device by pressing the button</string>
     <string name="volume_answer_call_title">Answer call</string>
     <string name="volume_answer_call_summary">Answer incoming calls by pressing the volume buttons</string>
-    <string name="click_partial_screenshot_title">Click to partial screenshot</string>
-    <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
 
     <!-- Key backlight -->
     <string name="button_backlight_title">Backlight</string>
@@ -262,19 +259,6 @@
     <string name="advanced_reboot_summary">When unlocked, include options in the power menu for restarting into recovery or bootloader</string>
     <string name="advanced_reboot_secured_title">Secured lockscreen</string>
     <string name="advanced_reboot_secured_summary">Display advanced restart options on secured lockscreen</string>
-
-    <!-- UI settings -->
-    <string name="monet_title">Monet settings</string>
-    <string name="monet_summary">Customize Monet theme engine</string>
-
-    <!-- Monet Engine -->
-    <string name="monet_engine_custom_color_title">Use custom color</string>
-    <string name="monet_engine_custom_color_summary">Use custom color for monet engine instead of wallpaper colors</string>
-    <string name="monet_engine_color_override_title">Custom color</string>
-    <string name="monet_engine_white_luminance_user_title">White luminance</string>
-    <string name="monet_engine_accurate_shades_title">Use accurate shades</string>
-    <string name="monet_engine_chroma_factor_title">Chroma factor</string>
-    <string name="monet_engine_linear_lightness_title">Use linear lightness</string>
 
     <!-- Quick unlock -->
    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
@@ -502,19 +486,6 @@
     <string name="qs_footer_warnings_title">Footer alerts</string>
     <string name="qs_footer_warnings_summary">Display an alert at bottom of QS panel when network is monitored by external apps or VPN</string>
 
-    <!-- Media art -->
-    <string name="media_art_title">Media cover art</string>
-    <string name="media_art_summary">Display media cover art when available</string>
-
-    <!-- Lockscreen album art filter -->
-    <string name="lockscreen_albumart_filter_title">Media cover art filter</string>
-    <string name="lockscreen_albumart_filter_none">None</string>
-    <string name="lockscreen_albumart_filter_grayscale">Grayscale</string>
-    <string name="lockscreen_albumart_filter_tint">Accent tinted</string>
-    <string name="lockscreen_albumart_filter_blur">Blur</string>
-    <string name="lockscreen_albumart_filter_grayblur">Grayscale and blurred</string>
-    <string name="lockscreen_media_blur_title">Media art blur level</string>
-
     <!-- Pulse music visualizer -->
     <string name="pulse_help_policy_notice_title">About Pulse</string>
     <string name="pulse_help_policy_notice_summary">Pulse is a brilliant audio graphic equalizer when music plays on the device</string>
@@ -541,7 +512,6 @@
     <string name="pulse_color_accent">Accent</string>
     <string name="pulse_color_custom">Custom</string>
     <string name="pulse_color_lava_lamp">Lava lamp</string>
-    <string name="pulse_color_auto">Album art</string>
     <string name="pulse_color_user_title">Choose color</string>
     <string name="pulse_smoothing_enabled_title">Turn on smoothing</string>
     <string name="pulse_smoothing_enabled_summary">Each bar is animated more smoothly</string>
@@ -603,10 +573,6 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-
-    <!-- Three-fingers-swipe to screenshot -->
-    <string name="three_finger_gesture">Swipe to screenshot</string>
-    <string name="three_finger_gesture_summary">Swipe three fingers to take screenshot</string>
 
     <!-- Running services - Background processes tab -->
     <string name="background_processes_settings_title">Background processes</string>
@@ -713,20 +679,6 @@
     <string name="led_notification_text">LED light enabled by settings</string>
     <string name="notification_light_add_apps_empty_summary">To add per app control, activate \'%1$s\' and press \'Add\'</string>
 
-    <!-- Heads up timeout -->
-    <string name="notification_heads_up_title">Heads up</string>
-    <string name="notification_heads_up_summary">Allow pop up notifications</string>
-    <string name="notification_heads_up_timeout_title">Time out</string>
-    <string name="notification_heads_up_timeout_summary">Time to display heads up notifications</string>
-
-    <!-- Less boring heads up -->
-    <string name="less_boring_heads_up_title">Less boring</string>
-    <string name="less_boring_heads_up_summary">Display popup notifications only for alarm, dialer and messaging app</string>
-
-    <!-- Notifications while screen on -->
-    <string name="notification_sound_vib_screen_on_title">Noisy notifications</string>
-    <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
-
     <!-- Privacy Indicator -->
     <string name="mic_camera_privacy_indicator_title">Mic and camera privacy indicator</string>
     <string name="mic_camera_privacy_indicator_summary">Show separate indicator when any app uses mic or camera</string>
@@ -808,16 +760,16 @@
     <string name="auto_brightness_one_shot_title">One shot auto-brightness</string>
     <string name="auto_brightness_one_shot_summary">Brightness adjustment will only occur at the moment the screen is turned on</string>
 
+    <!-- Per-app volume -->
+    <string name="app_volume">App volume</string>
+    <string name="app_volume_title">Per-app volume control</string>
+    <string name="app_volume_summary">Show per-app volume button into volume dialog</string>
+
     <!-- Cloudflare DNS Option -->
     <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
 
     <!-- AdGuard DNS Option -->
     <string name="private_dns_mode_adguard" translatable="false">AdGuard DNS</string>
-
-    <!-- Private DNS Providers -->
-    <string name="private_dns_mode_open_dns" translatable="false">Open DNS</string>
-    <string name="private_dns_mode_cleanbrowsing" translatable="false">Cleanbrowsing DNS</string>
-    <string name="private_dns_mode_quad9" translatable="false">Quad9 DNS</string>
 
     <!-- Alert Slider Notifications (OnePlus devices) -->
     <string name="alert_slider_notifications_title">Alert slider notifications</string>
@@ -889,28 +841,6 @@
     <string name="custom_timeout_summary_4hours">4 hours</string>
     <string name="custom_timeout_summary_8hours">8 hours</string>
 
-    <!-- Hotspot client manager -->
-    <string name="wifi_hotspot_client_manager_title">Connected devices</string>
-    <string name="wifi_hotspot_client_manager_summary">List and manage devices connected to the hotspot. Setting a limit on the number of clients</string>
-    <string name="wifi_hotspot_client_manager_list_only_summary">List devices connected to the hotspot</string>
-    <string name="wifi_hotspot_client_limit_title">Limit of connected devices</string>
-    <string name="wifi_hotspot_blocked_clients_list_title">Blocked Devices</string>
-    <string name="wifi_hotspot_connected_clients_list_title">Connected Devices</string>
-    <string name="wifi_hotspot_block_client_dialog_title">Block device</string>
-    <string name="wifi_hotspot_block_client_dialog_text">This action will disconnect \"<xliff:g id="device_name">%1$s</xliff:g>\" from this device and add it to blocklist</string>
-    <string name="wifi_hotspot_unblock_client_dialog_title">Unblock device</string>
-    <string name="wifi_hotspot_unblock_client_dialog_text">This device \"<xliff:g id="device_name">%1$s</xliff:g>\" will be able to connect to this hotspot</string>
-    <string name="wifi_hotspot_client_manager_footer_text">No clients are currently available. Connected and blocked devices will be listed here when available.</string>
-
-    <!-- Hotspot hidden SSID -->
-    <string name="wifi_hotspot_hidden_ssid_title">Hidden network</string>
-    <string name="wifi_hotspot_hidden_ssid_summary">Your mobile hotspot\'s name won\'t appear in the list of available WLAN networks.</string>
-
-    <!-- Hotspot. More bands -->
-    <string name="wifi_band_24ghz_and_5ghz" translatable="false">2.4 GHz &amp; 5 GHz</string>
-    <string name="wifi_band_24ghz_and_6ghz" translatable="false">2.4 GHz &amp; 6 GHz</string>
-    <string name="wifi_band_60ghz" translatable="false">60 GHz</string>
-
     <!-- Disable QS -->
     <string name="disable_qs_title">Hide QS on secure lock screen</string>
     <string name="disable_qs_summary">Prevent access to QS tiles on secure lock screen</string>
@@ -929,10 +859,6 @@
     <string name="back_height_high_label">Bottom</string>
     <string name="back_height_title">Back gesture height</string>
     <string name="back_height_summary">Screen height valid for back gesture</string>
-
-    <!-- Notification guts kill app button -->
-    <string name="notification_guts_kill_app_button_title">Force stop button</string>
-    <string name="notification_guts_kill_app_button_summary">Show force stop button in the notification\'s longpress menu</string>
 
     <!-- Screen off UDFPS -->
     <string name="screen_off_udfps_title">Screen off UDFPS</string>
@@ -1004,18 +930,6 @@
     <string name="reticker_colored_title">Use app colored background</string>
     <string name="reticker_colored_summary">Replace reTicker background color using notification app main color</string>
 
-    <!-- Smart Pixels -->
-    <string name="smart_pixels_warning_text">Smart pixels is a power saving feature. Depending on how many pixels you decide to turn off, you could see improvement in battery life. Note that in some cases it can result in unresponsive areas on touch screen</string>
-    <string name="smart_pixels_title">Smart Pixels</string>
-    <string name="smart_pixels_summary">Save battery by shutting off extra pixels</string>
-    <string name="smart_pixels_enable_title">Enable Smart Pixels</string>
-    <string name="smart_pixels_enable_summary">Shut off pixels to reduce power consumption</string>
-    <string name="smart_pixels_on_power_save_title">Auto-enable on battery saver</string>
-    <string name="smart_pixels_on_power_save_summary">Enable Smart Pixels when battery saver is enabled</string>
-    <string name="smart_pixels_percent">Percent of pixels to disable</string>
-    <string name="smart_pixels_shift_title">Burn-in protection</string>
-    <string name="smart_pixels_shift_summary">Prevents burn-in on OLED devices by shifting pixels every so often</string>
-
     <!-- Black theme -->
     <string name="system_black_theme_title">Use black theme</string>
     <string name="system_black_theme_summary">Force black background colors</string>
@@ -1068,10 +982,6 @@
     <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticipate</string>
     <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipate overshoot</string>
 
-    <!-- Screenshot shutter sound  -->
-    <string name="screenshot_shutter_sound_title">Screenshot sound</string>
-    <string name="screenshot_shutter_sound_summary">Play sound when screenshot is taken</string>
-
     <!-- QS tiles layout  -->
     <string name="qs_layout_category_title">Tiles layout</string>
     <string name="qs_tile_label_hide_title">Hide label</string>
@@ -1089,47 +999,10 @@
     <!-- Smart charging -->
     <string name="smart_charging_title">Smart Charging</string>
     <string name="smart_charging_summary">Set maximum charging level</string>
-    <string name="smart_charging_master_switch_title">Use Smart Charging</string>
     <string name="smart_charging_switch_title">Enable Smart Charging</string>
     <string name="smart_charging_level_title">Stop trigger level</string>
     <string name="smart_charging_resume_level_title">Start trigger level</string>
     <string name="smart_charging_reset_stats_title">Reset battery statistics</string>
     <string name="smart_charging_reset_stats_summary">Reset battery statistics after reaching user defined charging level</string>
     <string name="smart_charging_footer">Smart Charging allows you to set maximum charging level to extend the lifespan of your battery. When enabled, battery stops charging at Stop trigger level and resumes charging at Start trigger level. Stop trigger level should be always greater than Start trigger level.</string>
-
-    <!-- Adaptive Playback -->
-    <string name="adaptive_playback_title">Adaptive playback</string>
-    <string name="adaptive_playback_summary">Pause media when volume is muted and resume it by increasing volume within the timeout</string>
-    <string name="adaptive_playback_intro_text">Automatically pauses media when the volume is muted and will resume automatically when volume is restored within the set time</string>
-    <string name="adaptive_playback_timeout_title">Playback timeout</string>
-
-    <!-- Ignore window secure -->
-    <string name="ignore_window_secure_title">Ignore window secure flags</string>
-    <string name="ignore_window_secure_summary">This removes the screenshots and screenrecords limits for all applications. Normally, special applications are replaced with black areas in records. This can be convenient in some cases but may lead to privacy leaks. After changing this toggle, you may need to restart applications for the change to take effect.</string>
-
-    <!-- Netflix Spoof -->
-    <string name="netflix_spoof_title">Netflix spoof</string>
-    <string name="netflix_spoof_summary">Spoof your device as different model for Netflix</string>
-
-    <!-- Application downgrade -->
-    <string name="app_downgrade_title">Allow application downgrade</string>
-    <string name="app_downgrade_summary">This allows you to downgrade applications. Note that this may lead to crashes and data corruption.</string>
-
-    <!-- Sensor block per-package -->
-    <string name="sensor_block_title">Sensor block per-package</string>
-    <string name="sensor_block_summary">Block access to certain sensors for some apps to save battery.</string>
-
-    <!-- Sensor block per-package -->
-    <string name="dialog_delete_title">Delete</string>
-    <string name="dialog_delete_message">Remove selected item?</string>
-    <string name="profile_choose_app">Choose app</string>
-    <string name="sensor_block_app_picker_title">Choose apps to block sensors for</string>
-    <string name="sensor_block_app_picker_summary">Block access to various sensors for selected apps.</string>
-    <string name="add_sensor_block_package_title">Add apps for Sensor block</string>
-    <string name="add_sensor_block_package_summary">Significant motion, accelerometer, linear acceleration sensors will be blocked for these apps</string>
-
-    <!-- Enable Signature spoofing -->
-    <string name="signature_spoofing_title">Spoof package signature</string>
-    <string name="signature_spoofing_summary">Enable to allow package signature spoofing</string>
-    <string name="signature_spoofing_footnote">Signature spoofing allows an app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Legitimate uses include an emulator pretending to be what it emulates. Grant this permission with caution only!</string>
 </resources>

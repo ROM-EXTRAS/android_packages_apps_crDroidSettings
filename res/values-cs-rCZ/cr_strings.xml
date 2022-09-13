@@ -136,7 +136,6 @@
     <string name="lockscreen_battery_info_title">Informace o\u00a0baterii</string>
     <string name="lockscreen_battery_info_summary">V průběhu nabíjení zobrazit na obrazovce uzamčení maximální nabíjecí proud, napětí a\u00a0teplotu baterie</string>
     <!-- Button settings -->
-    <string name="extras_title">Další funkce</string>
     <string name="additional_buttons_title">Další tlačítka</string>
     <string name="hardware_keys_power_key_title">Tlačítko „Napájení“</string>
     <string name="hardware_keys_home_key_title">Tlačítko „Domů“</string>
@@ -190,8 +189,6 @@
     <string name="button_wake_summary">Probudit zařízení stiskem tlačítka hlasitosti</string>
     <string name="volume_answer_call_title">Přijmout hovor</string>
     <string name="volume_answer_call_summary">Přijmout příchozí hovory stiskem jednoho z\u00a0tlačítek hlasitosti</string>
-    <string name="click_partial_screenshot_title">Krátkým stiskem zhotovit částečný snímek obrazovky</string>
-    <string name="click_partial_screenshot_summary">Krátkým současným stiskem tlačítek snížení hlasitosti a\u00a0napájení pořídit částečný snímek obrazovky</string>
     <!-- Key backlight -->
     <string name="button_backlight_title">Podsvícení</string>
     <string name="button_backlight_summary">Přizpůsobit nastavení podsvícení tlačítek</string>
@@ -767,22 +764,6 @@
     <string name="custom_timeout_summary_2hours">Po 2\u00a0hodinách</string>
     <string name="custom_timeout_summary_4hours">Po 4\u00a0hodinách</string>
     <string name="custom_timeout_summary_8hours">Po 8\u00a0hodinách</string>
-    <!-- Hotspot client manager -->
-    <string name="wifi_hotspot_client_manager_title">Připojená zařízení</string>
-    <string name="wifi_hotspot_client_manager_summary">Zobrazit a spravovat zařízení připojená k\u00a0hotspotu. Nastavení limitu počtu klientů</string>
-    <string name="wifi_hotspot_client_manager_list_only_summary">Seznam zařízení připojených k hotspotu</string>
-    <string name="wifi_hotspot_client_limit_title">Omezení počtu připojených zařízení</string>
-    <string name="wifi_hotspot_blocked_clients_list_title">Blokovaná zařízení</string>
-    <string name="wifi_hotspot_connected_clients_list_title">Připojená zařízení</string>
-    <string name="wifi_hotspot_block_client_dialog_title">Blokovat zařízení</string>
-    <string name="wifi_hotspot_block_client_dialog_text">Tato akce odpojí „<xliff:g id="device_name">%1$s</xliff:g>“ od tohoto zařízení a\u00a0přidá jej do seznamu blokovaných</string>
-    <string name="wifi_hotspot_unblock_client_dialog_title">Odblokovat zařízení</string>
-    <string name="wifi_hotspot_unblock_client_dialog_text">Toto zařízení: „<xliff:g id="device_name">%1$s</xliff:g>“ se bude moci připojit k\u00a0tomuto hotspotu</string>
-    <string name="wifi_hotspot_client_manager_footer_text">Aktuálně nejsou k dispozici žádní klienti. Připojená a blokovaná zařízení budou zobrazena v případě, že budou dostupná.</string>
-    <!-- Hotspot hidden SSID -->
-    <string name="wifi_hotspot_hidden_ssid_title">Skrytá síť</string>
-    <string name="wifi_hotspot_hidden_ssid_summary">Název vašeho mobilního hotspotu se nezobrazí v seznamu dostupných WLAN sítí.</string>
-    <!-- Hotspot. More bands -->
     <!-- Disable QS -->
     <string name="disable_qs_title">Skrýt QS na zabezpečené obrazovce uzamčení</string>
     <string name="disable_qs_summary">Zabránit přístupu k\u00a0dlaždicím Rychlého nastavení na zabezpečené obrazovce uzamčení</string>
@@ -926,8 +907,8 @@
     <string name="qs_columns_portrait_title">Počet sloupců (na výšku)</string>
     <string name="qs_columns_landscape_title">Počet sloupců (na šířku)</string>
     <!-- Statusbar Clock background chip -->
-    <string name="statusbar_clock_chip_title">Rozostření pozadí</string>
-    <string name="statusbar_clock_chip_summary">Zobrazit podsvícení za hodinami</string>
+    <string name="statusbar_clock_chip_title">Background chip</string>
+    <string name="statusbar_clock_chip_summary">Display accented chip behind clock</string>
     <!-- Smart charging -->
     <string name="smart_charging_title">Chytré nabíjení</string>
     <string name="smart_charging_summary">Nastavit maximální úroveň nabití</string>
@@ -937,9 +918,4 @@
     <string name="smart_charging_reset_stats_title">Obnovit statistiky baterie</string>
     <string name="smart_charging_reset_stats_summary">Obnoví statistiky baterie po dosažení úrovně nabití definované uživatelem</string>
     <string name="smart_charging_footer">Chytré nabíjení vám umožňuje nastavit maximální úroveň nabíjení pro prodloužení životnosti baterie. Pokud je povoleno, baterie se přestane nabíjet po dosažení Úrovně ukončení, a\u00a0zase bude v\u00a0nabíjení pokračovat při dosažení Úrovně spuštění. Úroveň ukončení by měla být vždy vyšší než Úroveň spuštění.</string>
-    <!-- Adaptive Playback -->
-    <string name="adaptive_playback_title">Adaptivní přehrávání</string>
-    <string name="adaptive_playback_summary">Pozastavit média, je‑li ztlumena hlasitost a\u00a0pokračovat v\u00a0přehrávání zvyšováním hlasitosti v\u00a0rozmezí časového limitu</string>
-    <string name="adaptive_playback_intro_text">Automaticky pozastaví média, když je hlasitost ztlumena a po obnovení hlasitosti v časovém limitu se automaticky obnoví</string>
-    <string name="adaptive_playback_timeout_title">Časový limit přehrávání</string>
 </resources>
