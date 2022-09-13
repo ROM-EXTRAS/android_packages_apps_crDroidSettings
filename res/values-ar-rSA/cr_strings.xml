@@ -136,7 +136,6 @@
     <string name="lockscreen_battery_info_title">معلومات البطارية</string>
     <string name="lockscreen_battery_info_summary">عرض معلومات البطارية عند الشحن</string>
     <!-- Button settings -->
-    <string name="extras_title">اضافات</string>
     <string name="additional_buttons_title">أزرار إضافية</string>
     <string name="hardware_keys_power_key_title">زر التشغيل</string>
     <string name="hardware_keys_home_key_title">زر الصفحة الرئيسية</string>
@@ -190,8 +189,6 @@
     <string name="button_wake_summary">إيقاظ الجهاز عن طريق الضغط على الأزرار</string>
     <string name="volume_answer_call_title">الرد على المكالمة</string>
     <string name="volume_answer_call_summary">الرد على المكالمات الواردة بالضغط على أزرار الصوت</string>
-    <string name="click_partial_screenshot_title">التقاط لقطة جزئية للشاشة</string>
-    <string name="click_partial_screenshot_summary">اضغط لفترة وجيزة زري خفض الصوت والطاقة لأخذ لقطة شاشة جزئية</string>
     <!-- Key backlight -->
     <string name="button_backlight_title">الضوء الخلفي</string>
     <string name="button_backlight_summary">تخصيص إعدادات الإضاءة الخلفية</string>
@@ -767,22 +764,6 @@
     <string name="custom_timeout_summary_2hours">ساعتان</string>
     <string name="custom_timeout_summary_4hours">4 ساعات</string>
     <string name="custom_timeout_summary_8hours">8 ساعات</string>
-    <!-- Hotspot client manager -->
-    <string name="wifi_hotspot_client_manager_title">الأجهزة المتصلة</string>
-    <string name="wifi_hotspot_client_manager_summary">عرض وإدارة الأجهزة المتصلة بنقطة الوصول. وضع حد لعدد الأجهزة المتصلة</string>
-    <string name="wifi_hotspot_client_manager_list_only_summary">عرض الأجهزة المتصلة بنقطة الاتصال.</string>
-    <string name="wifi_hotspot_client_limit_title">حد الأجهزة المتصلة</string>
-    <string name="wifi_hotspot_blocked_clients_list_title">الأجهزة المحظورة</string>
-    <string name="wifi_hotspot_connected_clients_list_title">الأجهزة المتّصلة</string>
-    <string name="wifi_hotspot_block_client_dialog_title">حظر جهاز</string>
-    <string name="wifi_hotspot_block_client_dialog_text">سيؤدي هذا الإجراء إلى قطع الاتصال\"<xliff:g id="device_name">%1$s</xliff:g>\" من هذا الجهاز وإضافته إلى قائمة الحظر</string>
-    <string name="wifi_hotspot_unblock_client_dialog_title">إلغاء حظر الجهاز</string>
-    <string name="wifi_hotspot_unblock_client_dialog_text">هذا الجهاز\"<xliff:g id="device_name">%1$s</xliff:g>\" سيكون قادرا على الاتصال بنقطة الاتصال</string>
-    <string name="wifi_hotspot_client_manager_footer_text">لا يوجد عملاء متوفرين حاليا. سيتم إدراج الأجهزة الموصولة والمحظورة هنا عندما تكون متاحة.</string>
-    <!-- Hotspot hidden SSID -->
-    <string name="wifi_hotspot_hidden_ssid_title">شبكة مخفية</string>
-    <string name="wifi_hotspot_hidden_ssid_summary">لن يظهر اسم نقطة اتصال هاتفك المحمول في قائمة شبكات WLAN المتاحة.</string>
-    <!-- Hotspot. More bands -->
     <!-- Disable QS -->
     <string name="disable_qs_title">إخفاء الإعدادات السريعة على شاشة القفل</string>
     <string name="disable_qs_summary">منع الوصول إلى مربعات الإعدادات السريعة على شاشة القفل</string>
@@ -937,9 +918,4 @@
     <string name="smart_charging_reset_stats_title">إعادة تعيين إحصائيات البطارية</string>
     <string name="smart_charging_reset_stats_summary">إعادة تعيين إحصائيات البطارية بعد الوصول إلى مستوى الشحن المحدد من قبل المستخدم</string>
     <string name="smart_charging_footer">يتيح لك الشحن الذكي ضبط الحد الأقصى لمستوى الشحن لتمديد عمر البطارية. عند التمكين ، تتوقف البطارية عن الشحن عند مستوى إيقاف المشغل وتستأنف الشحن عند مستوى بدء المشغل. يجب أن يكون مستوى إيقاف التشغيل دائمًا أكبر من مستوى بدء التشغيل.</string>
-    <!-- Adaptive Playback -->
-    <string name="adaptive_playback_title">التشغيل التكيفي</string>
-    <string name="adaptive_playback_summary">إيقاف الوسائط عند كتم الصوت واستعادته عن طريق زيادة مستوى الصوت خلال المهلة</string>
-    <string name="adaptive_playback_intro_text">إيقاف الوسائط تلقائياً عند كتم الصوت وسيتم استئنافها تلقائيًا عند استعادة الصوت خلال الوقت المحدد</string>
-    <string name="adaptive_playback_timeout_title">مهلة التشغيل</string>
 </resources>
