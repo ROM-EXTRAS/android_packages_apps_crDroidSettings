@@ -42,10 +42,11 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.crdroid.settings.fragments.About;
+import com.crdroid.settings.fragments.Miscellaneous;
+
 /*
 import com.crdroid.settings.fragments.Buttons;
 import com.crdroid.settings.fragments.LockScreen;
-import com.crdroid.settings.fragments.Miscellaneous;
 import com.crdroid.settings.fragments.Navigation;
 import com.crdroid.settings.fragments.Notifications;
 import com.crdroid.settings.fragments.QuickSettings;
@@ -133,10 +134,10 @@ public class crDroidSettingsLayout extends SettingsPreferenceFragment {
 
         @Override
         protected Void doInBackground(Void... params) {
+            Miscellaneous.reset(rContext);
 /*
             Buttons.reset(rContext);
             LockScreen.reset(rContext);
-            Miscellaneous.reset(rContext);
             Navigation.reset(rContext);
             Notifications.reset(rContext);
             QuickSettings.reset(rContext);
@@ -177,9 +178,9 @@ public class crDroidSettingsLayout extends SettingsPreferenceFragment {
             frags[5] = new UserInterface();
             frags[6] = new Notifications();
             frags[7] = new Sound();
-            frags[8] = new Miscellaneous();
 */
-            frags[0] = new About();
+            frags[0] = new Miscellaneous();
+            frags[1] = new About();
         }
 
         @Override
@@ -210,8 +211,8 @@ public class crDroidSettingsLayout extends SettingsPreferenceFragment {
             getString(R.string.ui_title),
             getString(R.string.notifications_title),
             getString(R.string.sound_title),
-            getString(R.string.misc_title),
 */
+            getString(R.string.misc_title),
             getString(R.string.about_crdroid)
         };
         return titleString;
