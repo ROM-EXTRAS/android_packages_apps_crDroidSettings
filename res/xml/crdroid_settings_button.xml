@@ -20,4 +20,43 @@
     android:key="button_settings"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="power_key"
+        android:title="@string/hardware_keys_power_key_title" >
+
+        <Preference
+            android:key="power_menu"
+            android:icon="@drawable/ic_settings_powermenu"
+            android:title="@string/power_menu_title"
+            android:summary="@string/power_menu_summary"
+            android:fragment="com.crdroid.settings.fragments.buttons.PowerMenuActions" />
+
+        <SwitchPreference
+            android:key="power_end_call"
+            android:icon="@drawable/ic_end_call"
+            android:title="@string/power_end_call_title"
+            android:summary="@string/power_end_call_summary"
+            android:persistent="false"/>
+
+        <lineageos.preference.LineageSystemSettingSwitchPreference
+            android:key="torch_long_press_power_gesture"
+            android:icon="@drawable/ic_flashlight"
+            android:title="@string/torch_long_press_power_gesture_title"
+            android:summary="@string/torch_long_press_power_gesture_desc"
+            android:defaultValue="false"
+            lineage:requiresConfig="@*android:bool/config_supportLongPressPowerWhenNonInteractive" />
+
+        <com.crdroid.settings.preferences.LineageSystemSettingSeekBarPreference
+            android:key="torch_long_press_power_timeout"
+            android:icon="@drawable/ic_timer_outline"
+            android:title="@string/torch_long_press_power_timeout_title"
+            android:defaultValue="0"
+            android:dependency="torch_long_press_power_gesture"
+            settings:defaultValueText="@string/never"
+            android:max="600"
+            settings:min="0"
+            settings:interval="10"
+            settings:units="@string/unit_seconds"
+            lineage:requiresConfig="@*android:bool/config_supportLongPressPowerWhenNonInteractive" />
+    </PreferenceCategory>
 </PreferenceScreen>
