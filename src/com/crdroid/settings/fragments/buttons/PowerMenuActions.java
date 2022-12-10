@@ -85,8 +85,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
         for (String action : PowerMenuConstants.getAllActions()) {
             if (action.equals(GLOBAL_ACTION_KEY_SCREENSHOT)) {
                 mScreenshotPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_SCREENSHOT);
-            } else if (action.equals(GLOBAL_ACTION_KEY_ONTHEGO)) {
-                mOnTheGoPref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_ONTHEGO);    
             } else if (action.equals(GLOBAL_ACTION_KEY_AIRPLANE)) {
                 mAirplanePref = (SwitchPreference) findPreference(GLOBAL_ACTION_KEY_AIRPLANE);
             } else if (action.equals(GLOBAL_ACTION_KEY_USERS)) {
@@ -113,11 +111,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
         if (mScreenshotPref != null) {
             mScreenshotPref.setChecked(mLineageGlobalActions.userConfigContains(
                     GLOBAL_ACTION_KEY_SCREENSHOT));
-        }
-
-        if (mOnTheGoPref != null) {
-            mOnTheGoPref.setChecked(mLineageGlobalActions.userConfigContains(
-                    GLOBAL_ACTION_KEY_ONTHEGO));
         }
 
         if (mAirplanePref != null) {
@@ -163,10 +156,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
         if (preference == mScreenshotPref) {
             value = mScreenshotPref.isChecked();
             mLineageGlobalActions.updateUserConfig(value, GLOBAL_ACTION_KEY_SCREENSHOT);
-
-        } else if (preference == mOnTheGoPref) {
-            value = mOnTheGoPref.isChecked();
-            mLineageGlobalActions.updateUserConfig(value, GLOBAL_ACTION_KEY_ONTHEGO);
 
         } else if (preference == mAirplanePref) {
             value = mAirplanePref.isChecked();
@@ -224,8 +213,6 @@ public class PowerMenuActions extends SettingsPreferenceFragment {
         ContentResolver resolver = mContext.getContentResolver();
         LineageSettings.Secure.putIntForUser(resolver,
                 LineageSettings.Secure.ADVANCED_REBOOT, 1, UserHandle.USER_CURRENT);
-        LineageSettings.Secure.putIntForUser(resolver,
-                LineageSettings.Secure.ADVANCED_REBOOT_SECURED, 1, UserHandle.USER_CURRENT);
     }
 
     @Override

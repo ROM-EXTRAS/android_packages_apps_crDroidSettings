@@ -38,7 +38,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
-import com.crdroid.settings.fragments.buttons.PowerMenuSettings;
+import com.crdroid.settings.fragments.buttons.PowerMenuActions;
 import com.crdroid.settings.preferences.LineageSystemSettingSeekBarPreference;
 import com.crdroid.settings.utils.DeviceUtils;
 import com.crdroid.settings.utils.TelephonyUtils;
@@ -472,7 +472,7 @@ public class Buttons extends SettingsPreferenceFragment implements
 
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
-        PowerMenuSettings.reset(mContext);
+        PowerMenuActions.reset(mContext);
     }
 
     @Override
