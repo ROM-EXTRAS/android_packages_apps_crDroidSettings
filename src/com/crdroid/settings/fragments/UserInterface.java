@@ -42,6 +42,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.crdroid.settings.fragments.ui.DozeSettings;
+import com.crdroid.settings.fragments.ui.MonetSettings;
 import com.crdroid.settings.fragments.ui.SmartPixels;
 import com.crdroid.settings.utils.DeviceUtils;
 
@@ -78,6 +79,7 @@ public class UserInterface extends SettingsPreferenceFragment {
                 Settings.System.CHARGING_ANIMATION, 1, UserHandle.USER_CURRENT);
         DozeSettings.reset(mContext);
         SmartPixels.reset(mContext);
+        MonetSettings.reset(mContext);
     }
 
     @Override
