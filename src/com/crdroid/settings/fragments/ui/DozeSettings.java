@@ -136,37 +136,37 @@ public class DozeSettings extends SettingsPreferenceFragment implements
 
         if (preference == mDozeAlwaysOnPreference) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_ALWAYS_ON, 
+            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_ALWAYS_ON,
                  value ? 1 : 0, UserHandle.USER_CURRENT);
             checkService(context);
             return true;
         } else if (preference == mTiltPreference) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_TILT_GESTURE, 
+            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_TILT_GESTURE,
                  value ? 1 : 0, UserHandle.USER_CURRENT);
             checkService(context);
             return true;
         } else if (preference == mPickUpPreference) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_PICK_UP_GESTURE, 
+            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_PICK_UP_GESTURE,
                  value ? 1 : 0, UserHandle.USER_CURRENT);
             checkService(context);
             return true;
         } else if (preference == mHandwavePreference) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_HANDWAVE_GESTURE, 
+            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_HANDWAVE_GESTURE,
                  value ? 1 : 0, UserHandle.USER_CURRENT);
             checkService(context);
             return true;
         } else if (preference == mPocketPreference) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_POCKET_GESTURE, 
+            Settings.Secure.putIntForUser(resolver, Settings.Secure.DOZE_POCKET_GESTURE,
                  value ? 1 : 0, UserHandle.USER_CURRENT);
             checkService(context);
             return true;
         } else if (preference == mRaiseToWakePreference) {
             boolean value = (Boolean) newValue;
-            Settings.Secure.putIntForUser(resolver, Settings.Secure.RAISE_TO_WAKE_GESTURE, 
+            Settings.Secure.putIntForUser(resolver, Settings.Secure.RAISE_TO_WAKE_GESTURE,
                  value ? 1 : 0, UserHandle.USER_CURRENT);
             checkService(context);
             return true;
@@ -177,7 +177,7 @@ public class DozeSettings extends SettingsPreferenceFragment implements
     private void checkService(Context context) {
         boolean serviceEnabled = Utils.enableService(context);
         boolean alwaysOnEnabled = Utils.isDozeAlwaysOnEnabled(context);
-        boolean raiseToWakeEnabled = Settings.Secure.getIntForUser(context.getContentResolver(), 
+        boolean raiseToWakeEnabled = Settings.Secure.getIntForUser(context.getContentResolver(),
                  Settings.Secure.RAISE_TO_WAKE_GESTURE, 0, UserHandle.USER_CURRENT) != 0;
         mRaiseToWakePreference.setEnabled(serviceEnabled);
         mDozeVibratePreference.setEnabled(serviceEnabled &&
@@ -240,6 +240,8 @@ public class DozeSettings extends SettingsPreferenceFragment implements
                 Settings.Secure.RAISE_TO_WAKE_GESTURE, 0, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 Settings.Secure.DOZE_GESTURE_VIBRATE, 0, UserHandle.USER_CURRENT);
+        Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.DOZE_ON_CHARGE, 0, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 Settings.Secure.PULSE_AMBIENT_LIGHT, 0, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
