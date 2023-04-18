@@ -32,6 +32,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.development.SystemPropPoker;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.crdroid.settings.fragments.misc.SensorBlock;
@@ -47,15 +48,15 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
 
     private static final String KEY_GAMES_SPOOF = "use_games_spoof";
     private static final String KEY_PHOTOS_SPOOF = "use_photos_spoof";
-    private static final String KEY_STREAM_SPOOF = "use_stream_spoof";
+    private static final String KEY_NETFLIX_SPOOF = "use_netflix_spoof";
 
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
-    private static final String SYS_STREAM_SPOOF = "persist.sys.pixelprops.streaming";
+    private static final String SYS_NETFLIX_SPOOF = "persist.sys.spoof_netflix";
 
     private SwitchPreference mGamesSpoof;
     private SwitchPreference mPhotosSpoof;
-    private SwitchPreference mStreamSpoof;
+    private SwitchPreference mNetFlixSpoof;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,9 +75,9 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         mPhotosSpoof.setChecked(SystemProperties.getBoolean(SYS_PHOTOS_SPOOF, true));
         mPhotosSpoof.setOnPreferenceChangeListener(this);
 
-        mStreamSpoof = (SwitchPreference) findPreference(KEY_STREAM_SPOOF);
-        mStreamSpoof.setChecked(SystemProperties.getBoolean(SYS_STREAM_SPOOF, true));
-        mStreamSpoof.setOnPreferenceChangeListener(this);
+        mNetFlixSpoof = (SwitchPreference) findPreference(KEY_NETFLIX_SPOOF);
+        mNetFlixSpoof.setChecked(SystemProperties.getBoolean(SYS_NETFLIX_SPOOF, false));
+        mNetFlixSpoof.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -84,14 +85,17 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         if (preference == mGamesSpoof) {
             boolean value = (Boolean) newValue;
             SystemProperties.set(SYS_GAMES_SPOOF, value ? "true" : "false");
+            SystemPropPoker.getInstance().poke();
             return true;
         } else if (preference == mPhotosSpoof) {
             boolean value = (Boolean) newValue;
             SystemProperties.set(SYS_PHOTOS_SPOOF, value ? "true" : "false");
+            SystemPropPoker.getInstance().poke();
             return true;
         } else if (preference == mStreamSpoof) {
             boolean value = (Boolean) newValue;
             SystemProperties.set(SYS_STREAM_SPOOF, value ? "true" : "false");
+            SystemPropPoker.getInstance().poke();
             return true;
         }
         return false;
@@ -103,7 +107,7 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
                 Settings.System.THREE_FINGER_GESTURE, 0, UserHandle.USER_CURRENT);
         SystemProperties.set(SYS_GAMES_SPOOF, "false");
         SystemProperties.set(SYS_PHOTOS_SPOOF, "true");
-        SystemProperties.set(SYS_STREAM_SPOOF, "true");
+        SystemProperties.set(SYS_STREAM_SPOOF, "false");
         SensorBlock.reset(mContext);
     }
 
