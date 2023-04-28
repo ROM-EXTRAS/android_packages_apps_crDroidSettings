@@ -19,6 +19,14 @@
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Monet Settings -->
+    <Preference
+        android:key="monet_engine"
+        android:icon="@drawable/ic_themes"
+        android:title="@string/monet_title"
+        android:summary="@string/monet_summary"
+        android:fragment="com.crdroid.settings.fragments.ui.MonetSettings" />
+
     <!-- Smart Pixels -->
     <Preference
         android:key="smart_pixels"
