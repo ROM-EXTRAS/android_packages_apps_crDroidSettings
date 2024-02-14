@@ -19,49 +19,4 @@
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceCategory
-        android:key="heads_up"
-        android:title="@string/notification_heads_up_title">
-
-        <com.crdroid.settings.preferences.GlobalSettingSwitchPreference
-            android:key="heads_up_notifications_enabled"
-            android:icon="@drawable/ic_headsup"
-            android:title="@string/notification_heads_up_title"
-            android:summary="@string/notification_heads_up_summary"
-            android:defaultValue="true" />
-
-        <com.crdroid.settings.preferences.SystemSettingSwitchPreference
-            android:key="less_boring_heads_up"
-            android:icon="@drawable/ic_headsup_sleep"
-            android:title="@string/less_boring_heads_up_title"
-            android:summary="@string/less_boring_heads_up_summary"
-            android:defaultValue="false"
-            android:dependency="heads_up_notifications_enabled" />
-
-        <com.crdroid.settings.preferences.SystemSettingSeekBarPreference
-            android:key="heads_up_timeout"
-            android:icon="@drawable/ic_clock"
-            android:title="@string/notification_heads_up_timeout_title"
-            android:summary="@string/notification_heads_up_timeout_summary"
-            settings:units="@string/unit_seconds"
-            android:defaultValue="5"
-            settings:min="1"
-            android:max="10"
-            android:dependency="heads_up_notifications_enabled" />
-    </PreferenceCategory>
-
-    <!-- Notification guts kill app button -->
-    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
-        android:key="notification_guts_kill_app_button"
-        android:icon="@drawable/ic_kill"
-        android:title="@string/notification_guts_kill_app_button_title"
-        android:summary="@string/notification_guts_kill_app_button_summary" />
-
-    <!-- Mute notifications when screen ON -->
-    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
-        android:key="notification_sound_vib_screen_on"
-        android:icon="@drawable/ic_bell_ring"
-        android:title="@string/notification_sound_vib_screen_on_title"
-        android:summary="@string/notification_sound_vib_screen_on_summary"
-        android:defaultValue="true" />
 </PreferenceScreen>
