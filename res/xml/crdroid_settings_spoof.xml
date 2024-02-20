@@ -8,4 +8,55 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/spoof_title">
 
+
+    <!-- Play integrity fix -->
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.pif"
+        android:title="@string/pif_spoof_title"
+        android:summary="@string/pif_spoof_summary"
+        android:defaultValue="true" />
+
+    <Preference
+        android:key="pif"
+        android:title="@string/pif_title"
+        android:summary="@string/pif_summary"
+        android:dependency="persist.sys.pif">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.goolag.pif"
+            android:targetClass="com.goolag.pif.PifActivity" />
+    </Preference>
+
+    <!-- Pixel Props (spoof gapps as Pixel 5a) -->
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.pixelprops"
+        android:title="@string/spoof_pixel_title"
+        android:summary="@string/spoof_pixel_summary"
+        android:defaultValue="true" />
+
+    <!-- Unlimited Photos storage -->
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.pixelprops.gphotos"
+        android:title="@string/photos_spoof_title"
+        android:summary="@string/photos_spoof_summary"
+        android:defaultValue="true" />
+
+    <!-- Unlock FPS for specific games -->
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.pixelprops.games"
+        android:title="@string/games_spoof_title"
+        android:summary="@string/games_spoof_summary"
+        android:defaultValue="false" />
+
+    <!-- Netflix -->
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.pixelprops.netflix"
+        android:title="@string/netflix_spoof_title"
+        android:summary="@string/netflix_spoof_summary"
+        android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+        android:key="spoof_storage_encryption_status"
+        android:title="@string/spoof_storage_encryption_status_title"
+        android:summary="@string/spoof_storage_encryption_status_summary"
+        android:defaultValue="false" />
 </PreferenceScreen>

@@ -217,26 +217,6 @@
     <string name="games_spoof_title">Unlock higher FPS in games</string>
     <string name="games_spoof_summary">Spoof your device as a different model for specific games to unlock higher FPS</string>
 
-    <!-- Netflix Spoof -->
-    <string name="netflix_spoof_title">Netflix spoof</string>
-    <string name="netflix_spoof_summary">Spoof your device as different model for Netflix</string>
-
-    <!-- Pif -->
-    <string name="pif_title">Play integrity fix</string>
-    <string name="pif_summary">View current values used to spoof GMS</string>
-    <string name="pif_spoof_title">Enable ROM-side Play integrity fix</string>
-    <string name="pif_spoof_summary">Disable to allow module usage with custom fingerprint values</string>
-
-    <!-- PixelProps -->
-    <string name="spoof_title">Spoofing</string>
-    <string name="spoof_summary">Enable spoofing for specific features within the ROM</string>
-    <string name="spoof_as_pixel_title">Enable Pixel Props</string>
-    <string name="spoof_as_pixel_summary">Spoof your device as Pixel 5 for Google apps. Keep enabled on non-Pixel devices</string>
-    <string name="spoof_recent_pixel_title">Spoof as Pixel 8 Pro</string>
-    <string name="spoof_recent_pixel_summary">Spoof your device as Pixel 8 Pro for our selected Google apps. Turn off when using a real Pixel device</string>
-    <string name="spoof_recent_pixel_all_title">Spoof as Pixel 8 Pro for all Google apps</string>
-    <string name="spoof_recent_pixel_all_summary">Spoof your device as Pixel 8 Pro for all Google apps. Turn off when using a real Pixel device. May lead to unintended heating or battery drain</string>
-
     <!-- Doze on charge -->
     <string name="doze_on_charge_title">Always show when charging</string>
     <string name="doze_on_charge_summary">Display device is charging</string>
@@ -349,4 +329,31 @@
     <string name="screen_off_animation_default">Default</string>
     <string name="screen_off_animation_crt">CRT</string>
     <string name="screen_off_animation_scale">Scale</string>
+
+
+    <!-- Netflix Spoof -->
+    <string name="netflix_spoof_title">Netflix spoof</string>
+    <string name="netflix_spoof_summary">Spoof your device as different model for Netflix</string>
+
+    <!-- Pif -->
+    <string name="pif_title">Play integrity fix</string>
+    <string name="pif_summary">View current values used to spoof GMS</string>
+    <string name="pif_spoof_title">Enable ROM-side Play integrity fix</string>
+    <string name="pif_spoof_summary">Disable to allow module usage with custom fingerprint values</string>
+
+    <!-- PixelProps -->
+    <string name="spoof_title">Spoofing</string>
+    <string name="spoof_summary">Enable spoofing for specific features within the ROM</string>
+    <string name="spoof_pixel_title">Enable Pixel Props</string>
+    <string name="spoof_pixel_summary">Spoof your device as Pixel 8 Pro for Google apps</string>
+    <string name="spoof_as_pixel_title">Enable Pixel Props</string>
+    <string name="spoof_as_pixel_summary">Spoof your device as Pixel 5 for Google apps. Keep enabled on non-Pixel devices</string>
+    <string name="spoof_recent_pixel_title">Spoof as Pixel 8 Pro</string>
+    <string name="spoof_recent_pixel_summary">Spoof your device as Pixel 8 Pro for our selected Google apps. Turn off when using a real Pixel device</string>
+    <string name="spoof_recent_pixel_all_title">Spoof as Pixel 8 Pro for all Google apps</string>
+    <string name="spoof_recent_pixel_all_summary">Spoof your device as Pixel 8 Pro for all Google apps. Turn off when using a real Pixel device. May lead to unintended heating or battery drain</string>
+
+    <!-- Spoof storage encryption status -->
+    <string name="spoof_storage_encryption_status_title">Use storage encryption spoofing</string>
+    <string name="spoof_storage_encryption_status_summary">Spoof storage encryption status to encrypted</string>
 </resources>
