@@ -43,6 +43,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.crdroid.settings.fragments.ui.doze.EdgeLightSettings;
 import com.crdroid.settings.fragments.ui.doze.Utils;
 
 import java.util.List;
@@ -212,6 +213,7 @@ public class DozeSettings extends SettingsPreferenceFragment implements
                 Settings.Secure.PULSE_AMBIENT_LIGHT_DURATION, 2, UserHandle.USER_CURRENT);
         Settings.Secure.putIntForUser(resolver,
                 Settings.Secure.PULSE_AMBIENT_LIGHT_LAYOUT, 0, UserHandle.USER_CURRENT);
+        EdgeLightSettings.reset(mContext);
     }
 
     @Override
