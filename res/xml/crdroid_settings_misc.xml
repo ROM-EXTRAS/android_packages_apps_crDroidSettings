@@ -20,11 +20,25 @@
 
     <!-- Unlimited google photos storage -->
     <SwitchPreference
-        android:key="use_photos_spoof"
+        android:key="persist.sys.gphooks.enable"
         android:icon="@drawable/ic_backup"
         android:title="@string/use_photos_spoof_title"
         android:summary="@string/use_photos_spoof_summary"
         android:defaultValue="true" />
+
+    <!-- Unlock FPS for specific games -->
+    <SwitchPreference
+        android:key="persist.sys.gamehooks.enable"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/games_spoof_title"
+        android:summary="@string/games_spoof_summary" />
+
+    <!-- Play Store -->
+    <SwitchPreference
+        android:key="persist.sys.vending.enable"
+        android:title="@string/spoofing_vending_title"
+        android:summary="@string/spoofing_vending_summary"
+        android:defaultValue="false" />
 
     <!-- Screenshot Sound  -->
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
